@@ -34,4 +34,4 @@ jobs:
       run: |
         git config user.name 'github-action'
         git config user.email 'github-action'
-        ghp-import -m 'Update slides' --push --branch gh-pages build/public
+        ghp-import -m 'Update slides' --push --no-history --branch gh-pages build/public
