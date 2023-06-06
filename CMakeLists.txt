@@ -15,6 +15,7 @@ add_custom_target(slides ALL
     -V backgroundTransition=none
     -V slideNumber=true
     -V height='\"100%\"'
+    -V viewDistance=3
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     DEPENDS ${CMAKE_SOURCE_DIR}/slides.md
     BYPRODUCTS ${CMAKE_BINARY_DIR}/slides.html
