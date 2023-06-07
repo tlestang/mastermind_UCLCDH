@@ -22,6 +22,17 @@ https://github.com/OxfordCodeReviewNet/forum
 
 :::
 
+::: notes
+
+Code by yourself, for your probmen
+Code in a team, for use by other people
+
+- only programmer working on your program.
+- collaborate with more than 2 people.
+- working on a software project that is meant to be used by others.
+
+:::
+
 
 # (Peer) Code review {background-image="img/w19.jpg"}
 
