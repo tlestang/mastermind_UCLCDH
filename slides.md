@@ -8,9 +8,9 @@
 
 # The Oxford Code Review Network {background-image="img/w19.jpg"}
 
-https://github.com/OxfordCodeReviewNet/forum
+[https://github.com/OxfordCodeReviewNet/forum](https://github.com/OxfordCodeReviewNet/forum)
 
-# Specificities of research software {background-image="img/w19.jpg"}
+# What sets research software apart {background-image="img/w19.jpg"}
 
 ::: incremental
 
@@ -118,7 +118,7 @@ perfectly obscure to beginners.
 
 # <span style="color: white">Attitude</span> {background-image="img/cycling_TT.jpg"}
 
-# It's a communication exercise {background-image="img/w19.jpg"}
+# Communication is key {background-image="img/w19.jpg"}
 
 Author: *This loop I wrote looks too complicated to me.*
 
@@ -204,7 +204,7 @@ Project managers must:
 - Motivate it.
 - Make it part of the team's culture.
 
-# Software quality: a "nice to to have" ? {background-image="img/w19.jpg"}
+# Software quality: a "nice to have" ? {background-image="img/w19.jpg"}
 
 - Accelerates research.
 - Drives inclusion.
