@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>slides</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="./lib/css/oxrse.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="code-review-is-great-yet-nobody-does-it."
+class="slide level1" data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Code review is great <span
+style="font-size: 0.6em">(yet nobody does it).</span></h1>
+<p><span style="font-size: 0.8em">Thibault Lestang</span></p>
+<p><span style="font-size: 0.8em">Department of Aeronautics, Imperial
+College London</span></p>
+<p><img data-src="img/SSI_PRIMARY-LOGO.png" style="width:30.0%" /></p>
+</section>
+<section id="the-oxford-code-review-network" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">The Oxford Code Review
+Network</h1>
+<p><a
+href="https://github.com/OxfordCodeReviewNet/forum">https://github.com/OxfordCodeReviewNet/forum</a></p>
+</section>
+<section id="what-sets-research-software-apart" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">What sets research software
+apart</h1>
+<div>
+<ul>
+<li class="fragment">Developed in a wide variety of contexts.</li>
+<li class="fragment">Written to answer (a) specific question(s).</li>
+<li class="fragment">Knowledge is the end-product, not software.</li>
+<li class="fragment">Non-uniform software engineering experience.</li>
+<li class="fragment">Mostly single developers.</li>
+</ul>
+</div>
+<aside class="notes">
+<p>Code by yourself, for your probmen Code in a team, for use by other
+people</p>
+<ul>
+<li>only programmer working on your program.</li>
+<li>collaborate with more than 2 people.</li>
+<li>working on a software project that is meant to be used by
+others.</li>
+</ul>
+</aside>
+</section>
+<section id="peer-code-review" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">(Peer) Code review</h1>
+<p>It’s not your usual paper peer review process!</p>
+<ul>
+<li>Informal.</li>
+<li>Routine.</li>
+<li>Low-stakes.</li>
+</ul>
+</section>
+<section id="changing-scale" class="slide level1"
+data-background-image="img/w19.jpg" data-transition="slide">
+<h1 data-background-image="img/w19.jpg" data-transition="slide">Changing
+scale</h1>
+<p><img data-src="img/sync_review_imperial.jpg" /></p>
+</section>
+<section id="in-person" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">In person</h1>
+<p>Delimited time in the week</p>
+<p>Avois written communication</p>
+</section>
+<section id="short-meetings" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Short meetings</h1>
+<p>It takes effort to</p>
+<ul>
+<li>Read source code.</li>
+<li>Understanding it.</li>
+<li>Forming an opinion about it.</li>
+</ul>
+<p>More short meetings more effective than fewer longer ones.</p>
+</section>
+<section id="async-preparation" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">(Async) Preparation</h1>
+<p>Reviewer extracts some code to review and provide
+<strong>context</strong> and <strong>expectations</strong>.</p>
+<p>Reviewers can spend up to 30min going through the code.</p>
+</section>
+<section id="it-doesnt-have-to-be-perfect-yet" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">It doesn’t have to be perfect
+yet</h1>
+<p>It is productive to look at code that is WIP.</p>
+<p>The only expectation is that code is readable by reviewers.</p>
+</section>
+<section id="its-not-about-the-bugs" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">It’s not about the bugs</h1>
+<figure>
+<img data-src="img/defects-improvement-bachelli-bird2013.png"
+alt="(Bachelli &amp; Bird, 2013)" />
+<figcaption aria-hidden="true">(Bachelli &amp; Bird, 2013)</figcaption>
+</figure>
+</section>
+<section id="target-understandability" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Target: understandability</h1>
+<p>Code review can be motivated by different aspects of software
+quality.</p>
+<p>Defining a clear scope sets expectations and focuses feedback.</p>
+</section>
+<section id="advice" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Advice</h1>
+</section>
+<section id="use-a-checklist" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Use a checklist</h1>
+<ul>
+<li><input type="checkbox" disabled="" />
+Poor formatting.</li>
+<li><input type="checkbox" disabled="" />
+Dead code.</li>
+<li><input type="checkbox" disabled="" />
+Missing documentation.</li>
+<li><input type="checkbox" disabled="" />
+Obscure names.</li>
+<li><input type="checkbox" disabled="" />
+Complex conditionals.</li>
+<li><input type="checkbox" disabled="" />
+Obscure one-liners.</li>
+<li><input type="checkbox" disabled="" />
+Duplicated code.</li>
+<li><input type="checkbox" disabled="" />
+Long procedures.</li>
+<li><input type="checkbox" disabled="" />
+Long parameter lists.</li>
+<li><input type="checkbox" disabled="" />
+Global state.</li>
+<li><input type="checkbox" disabled="" />
+Abuse of primitive types.</li>
+<li><input type="checkbox" disabled="" />
+Data clumps.</li>
+<li>…</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>“I don’t know what to look for”. Especially if low confidence.</li>
+<li>Start with items that do not require knowledge of the domain and/or
+the language.</li>
+</ul>
+</aside>
+</section>
+<section id="use-a-checklist-as-a-guide" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Use a checklist… as a guide</h1>
+<p>Some code can be crystal clear to language/domain experts and
+perfectly obscure to beginners.</p>
+</section>
+<section id="attitude" class="slide level1"
+data-background-image="img/cycling_TT.jpg">
+<h1 data-background-image="img/cycling_TT.jpg"><span
+style="color: white">Attitude</span></h1>
+</section>
+<section id="communication-is-key" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Communication is key</h1>
+<p>Author: <em>This loop I wrote looks too complicated to me.</em></p>
+<div class="fragment">
+<p>Reviewer: <em>Hmmm yes. You could just use a pipe and
+<code>xargs</code>.</em></p>
+</div>
+<div class="fragment">
+<p>Author: <em>What’s <code>xargs</code>?</em></p>
+</div>
+<div class="fragment">
+<p>Reviewer: <em>It’s basically mapping a command over a set of inputs -
+think functional programming!</em></p>
+</div>
+<div class="fragment">
+<p>Author: <em>…</em></p>
+</div>
+<div class="fragment">
+<p>Reviewer: <em>Alhtough you could also do the same thing with
+<code>sed</code>.</em></p>
+</div>
+<div class="fragment">
+<p>Author (looking frustrated): <em>I have no idea what you’re talking
+about.</em></p>
+</div>
+</section>
+<section id="giving-feedback-takes-practice" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Giving feedback takes
+practice</h1>
+<ol type="1">
+<li>Own you opinions.</li>
+<li>Make it about the code.</li>
+<li>Be specific.</li>
+<li>Suggest an alternative.</li>
+</ol>
+<div class="fragment">
+<p><del><em>Your function name doesn’t make sense</em></del></p>
+</div>
+<div class="fragment">
+<p><em>I think this function’s purpose would be much clearer if it was
+given a more explicit name.. perhaps
+<code>apply_bwd_transform</code>?</em></p>
+</div>
+</section>
+<section id="code-review-is-both-technical-and-social"
+class="slide level1" data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Code review is both
+<strong>technical</strong> and <strong>social</strong></h1>
+<p>Code reviews can drive both inclusion and exclusion.</p>
+<div class="fragment">
+<blockquote>
+<p>A bad reviewer tries to force their preference on you. A good code
+reviewer makes your code conform to certain principles, but not opinion.
+(<em>Quote from survey participant from Greiler, 2016</em>)</p>
+</blockquote>
+</div>
+</section>
+<section id="define-and-refine-a-policy" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Define (and refine) a
+policy</h1>
+<ul>
+<li>Well defined process.</li>
+<li>Default scope.</li>
+<li>Moderator(s).</li>
+<li>Code of conduct.</li>
+<li>Conflict resolution.</li>
+</ul>
+<aside class="notes">
+<p>A code reviwe is a conversation, potentially involving more than 2
+people. as any converstaion it can shift to irrelevant topics,
+unproductive arguments or power struggles.</p>
+<p>A clear policy including moderation and conflict resolution
+procedures can guard against these.</p>
+</aside>
+</section>
+<section id="and-yet" class="slide level1"
+data-background-image="img/w19.jpg" data-transition="slide">
+<h1 data-background-image="img/w19.jpg" data-transition="slide">And
+yet…</h1>
+</section>
+<section id="and-yet-we-stopped" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">And yet we stopped</h1>
+<p>Bottom up doesn’t go far without top-down.</p>
+<p>Project managers must:</p>
+<ul>
+<li>Facilitate code review.</li>
+<li>Motivate it.</li>
+<li>Make it part of the team’s culture.</li>
+</ul>
+</section>
+<section id="software-quality-a-nice-to-have" class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Software quality: a “nice to
+have” ?</h1>
+<ul>
+<li>Accelerates research.</li>
+<li>Drives inclusion.</li>
+<li>Attracts and retains talents.</li>
+<li>Magnifies impact.</li>
+</ul>
+</section>
+<section id="software-quality-a-must-have." class="slide level1"
+data-background-image="img/w19.jpg">
+<h1 data-background-image="img/w19.jpg">Software quality: a must
+have.</h1>
+<p>Research software development should hold particularly high standards
+of quality.</p>
+<ul>
+<li>Auditability</li>
+<li>Reproducibility</li>
+<li>Reuse, as-is or as a part of something else</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4/plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4/plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        height: "100%",
+
+	  katex: {
+	      version: 'latest',
+	      delimiters: [
+		  {left: '$$', right: '$$', display: true},
+		  {left: '$', right: '$', display: false},
+		  {left: '\\(', right: '\\)', display: false},
+		  {left: '\\[', right: '\\]', display: true}
+	      ],
+	      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+	  },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath.KaTeX,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
